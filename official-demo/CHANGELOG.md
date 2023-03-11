@@ -1,5 +1,11 @@
 # official-demo
 
+## 0.0.3
+
+### Patch Changes
+
+- [#4](https://github.com/Binbiubiubiu/tqt-demo/pull/4) [`5e4b0a7`](https://github.com/Binbiubiubiu/tqt-demo/commit/5e4b0a7617964698a5f9062678c31cc7852edb64) Thanks [@Binbiubiubiu](https://github.com/Binbiubiubiu)! - add canvas api
+
 ## 0.0.2
 
 ### Patch Changes
