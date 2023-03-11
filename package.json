@@ -1,0 +1,23 @@
+{
+  "name": "tqt-demo",
+  "version": "1.0.0",
+  "description": "some demo",
+  "author": "Binbiubiubiu <2632003786@qq.com>",
+  "main": "",
+  "private": true,
+  "scripts": {
+    "changeset": "changeset",
+    "release":"echo release"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.4.8",
+    "@changesets/cli": "^2.26.0"
+  },
+  "repository": "git+https://github.com/Binbiubiubiu/tqt-demo.git",
+  "bugs": {
+    "url": "https://github.com/Binbiubiubiu/tqt-demo/issues"
+  },
+  "homepage": "https://github.com/Binbiubiubiu/tqt-demo#readme"
+}
