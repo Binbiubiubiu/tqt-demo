@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "changeset": "changeset",
-    "release":"echo release"
+    "release": "changeset publish"
   },
   "packageManager": "pnpm@7.27.0",
   "keywords": [],
