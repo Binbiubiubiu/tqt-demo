@@ -14,7 +14,8 @@ export default defineAppConfig({
     navigationBarBackgroundColor: "#000",
     showNavigationBarLogo: false,
     navigationBarForceEnable: true,
-    gpuAccelerate: true,
+    gpuAccelerate: "true",
+    enableSkia: "true"
   },
   subPackages: [
     {
@@ -25,7 +26,7 @@ export default defineAppConfig({
         "action-sheet/action-sheet",
         "alert/alert",
         "animation/animation",
-        // "canvas/canvas",
+        "canvas/canvas",
         // "card-pack/card-pack",
         // "choose-city/choose-city",
         // "choose-location/choose-location",
