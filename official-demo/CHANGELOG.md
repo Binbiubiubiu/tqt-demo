@@ -1,5 +1,11 @@
 # official-demo
 
+## 0.0.4
+
+### Patch Changes
+
+- [`9626a28`](https://github.com/Binbiubiubiu/tqt-demo/commit/9626a28e28331e19597fe102984f41ef513578b3) Thanks [@Binbiubiubiu](https://github.com/Binbiubiubiu)! - test
+
 ## 0.0.3
 
 ### Patch Changes
