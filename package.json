@@ -9,6 +9,7 @@
     "changeset": "changeset",
     "release":"echo release"
   },
+  "packageManager": "pnpm@7.27.0",
   "keywords": [],
   "license": "MIT",
   "devDependencies": {
