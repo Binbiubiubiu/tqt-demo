@@ -1,6 +1,6 @@
 import { Component, PropsWithChildren } from "react";
-import { View,Button } from "@tarojs/components";
-import Taro from "@tarojs/taro"
+import { View, Button } from "@tarojs/components";
+import Taro from "@tarojs/taro";
 
 export default class Alert extends Component<PropsWithChildren> {
   componentWillMount() {}
@@ -13,20 +13,19 @@ export default class Alert extends Component<PropsWithChildren> {
 
   componentDidHide() {}
 
-  alert=()=> {
+  alert = () => {
     Taro.showModal({
-      title: '亲',
-      content: '您本月的账单已出',
-      confirmText: '我知道了',
-      showCancel:false,
-      success: () => {
-        Taro.showModal({
-          title: '用户点击了「我知道了」',
-          showCancel:false,
-        });
-      }
+      title: "亲",
+      content: "您本月的账单已出",
+      confirmText: "我知道了",
+      showCancel: false,
+    }).then(() => {
+      Taro.showModal({
+        title: "用户点击了「我知道了」",
+        showCancel: false,
+      });
     });
-  }
+  };
 
   render() {
     return (

@@ -59,10 +59,10 @@ let interfaceList = [
 
 if (my.ap) {
   interfaceList = interfaceList.concat([
-    {
-      name: "联系人",
-      path: "/page/API/contact/contact",
-    },
+    // {
+    //   name: "联系人",
+    //   path: "/page/API/contact/contact",
+    // },
     // {
     //   name: '标题栏加载动画',
     //   path: '/page/API/navigation-bar-loading/navigation-bar-loading',

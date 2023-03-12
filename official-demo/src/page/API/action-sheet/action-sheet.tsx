@@ -1,6 +1,6 @@
 import { Component, PropsWithChildren } from "react";
 import { View, Button } from "@tarojs/components";
-import Taro from '@tarojs/taro'
+import Taro from "@tarojs/taro";
 
 export default class ActionSheet extends Component<PropsWithChildren> {
   componentWillMount() {}
@@ -13,19 +13,18 @@ export default class ActionSheet extends Component<PropsWithChildren> {
 
   componentDidHide() {}
 
-  showActionSheet=()=> {
+  showActionSheet = () => {
     Taro.showActionSheet({
-      alertText: '淘宝-ActionSheet',
-      itemList: ['菜单一', '菜单二', '菜单三'],
-      cancelButtonText: '取消好了',
-      success: (res) => {
-        const btn = res.tapIndex === -1 ? '取消' : '第' + res.tapIndex + '个';
-        Taro.showModal({
-          title: `你点了${btn}按钮`,
-        });
-      },
+      alertText: "淘宝-ActionSheet",
+      itemList: ["菜单一", "菜单二", "菜单三"],
+      cancelButtonText: "取消好了",
+    }).then((res) => {
+      const btn = res.tapIndex === -1 ? "取消" : "第" + res.tapIndex + "个";
+      Taro.showModal({
+        title: `你点了${btn}按钮`,
+      });
     });
-  }
+  };
 
   render() {
     return (

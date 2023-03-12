@@ -29,12 +29,12 @@ export default class Search extends Component<PropsWithChildren> {
 
   componentDidMount() {
     this.setState({
-      history: Taro.getStorageSync('searchHistory'),
+      history: Taro.getStorageSync("searchHistory"),
     });
-    console.log(Taro.getStorageSync('searchHistory' ));
+    console.log(Taro.getStorageSync("searchHistory"));
     this.onInput = debounce(this.onInput.bind(this), 400);
-    my.setNavigationBar({
-      borderBottomColor: '#fff',
+    Taro.setNavigationBar({
+      borderBottomColor: "#fff",
     });
   }
 
@@ -44,12 +44,11 @@ export default class Search extends Component<PropsWithChildren> {
 
   componentDidHide() {}
 
-
-  clear=()=> {
+  clear = () => {
     Taro.showModal({
-      content: '确定删除相关历史？',
-      showCancel:true,
-      success: res => {
+      content: "确定删除相关历史？",
+      showCancel: true,
+      success: (res) => {
         if (res.confirm) {
           Taro.clearStorage();
           this.setState({
@@ -58,21 +57,23 @@ export default class Search extends Component<PropsWithChildren> {
         }
       },
     });
-  }
-  onInput=(keyword)=> {
+  };
+  onInput = (e: any) => {
+    const keyword = e.detail.value;
+    console.log(e.detail.value);
     this.setState({
       value: keyword,
     });
     const regExp = /[A-Za-z]/;
-    if (keyword === '' || (regExp.test(keyword) && keyword.length === 1)) {
+    if (keyword === "" || (regExp.test(keyword) && keyword.length === 1)) {
       this.setState({
         componentSuggestions: [],
         apiSuggestions: [],
       });
       return;
     }
-    const componentSuggestions = [];
-    const apiSuggestions = [];
+    const componentSuggestions = [] as any[];
+    const apiSuggestions = [] as any[];
     for (let i = 0; i < componentList.length; i++) {
       if (
         componentList[i].suggestion
@@ -93,34 +94,33 @@ export default class Search extends Component<PropsWithChildren> {
       }
     }
     this.setState({ componentSuggestions, apiSuggestions });
-  }
-  onClear=() =>{
+  };
+  onClear = () => {
     this.setState({
-      value: '',
+      value: "",
     });
-  }
-  onCancel=() =>{
+  };
+  onCancel = () => {
     this.setState({
       componentSuggestions: [],
       apiSuggestions: [],
-      value: '',
+      value: "",
     });
     Taro.navigateBack();
-  }
-  onItemTap=({ name })=> {
+  };
+  onItemTap = ({ name }) => {
     this.setState({
       value: name,
     });
 
     this.onInput(name);
-  }
-  onListItemTap(name:string,url:string){
+  };
+  onListItemTap(name: string, url: string) {
     this.addToHistory(name);
     Taro.navigateTo({ url });
   }
-  addToHistory(keyword:string) {
-    const searchHistory =
-      Taro.getStorageSync('searchHistory') || [];
+  addToHistory(keyword: string) {
+    const searchHistory = Taro.getStorageSync("searchHistory") || [];
     let index = -1;
 
     for (let i = 0; i < searchHistory.length; i++) {
@@ -148,10 +148,7 @@ export default class Search extends Component<PropsWithChildren> {
       }
     }
 
-    Taro.setStorageSync(
-      'searchHistory',
-       history,
-    );
+    Taro.setStorageSync("searchHistory", history);
 
     this.setState({
       history,
@@ -159,52 +156,52 @@ export default class Search extends Component<PropsWithChildren> {
   }
 
   render() {
-    const { componentSuggestions, apiSuggestions,value,history,hot } = this.state;
+    const { componentSuggestions, apiSuggestions, value, history, hot } =
+      this.state;
     return (
       <View className="page">
         <View className="search-bar">
+          {/* https://github.com/NervJS/taro/issues/12571#issuecomment-1280338905 */}
           <am-search-bar
             focus
             placeholder="搜索你想要的组件和API"
-            onInput="onInput"
-            onCancel="onCancel"
-            onClear="onClear"
-            onSubmit="onSubmit"
+            onInput={this.onInput}
+            onCancel={this.onCancel}
+            onClear={this.onClear}
+            // onSubmit={this.onSubmit}
             showCancelButton={false}
           >
             {value}
           </am-search-bar>
         </View>
-       {componentSuggestions.length === 0 && apiSuggestions.length === 0? (
-        <View
-          className="search-container"
-
-        >
-         {value.length === 0?<View >
-            {history.length > 0?<View>
-              <View className="history">
-                历史<View className="clear" onClick={this.clear}></View>
+        {componentSuggestions.length === 0 && apiSuggestions.length === 0 ? (
+          <View className="search-container">
+            {value.length === 0 ? (
+              <View>
+                {history.length > 0 ? (
+                  <View>
+                    <View className="history">
+                      历史<View className="clear" onClick={this.clear}></View>
+                    </View>
+                    <BlockList
+                      listData={history}
+                      className="history-list"
+                      onItemTap={this.onItemTap}
+                    />
+                  </View>
+                ) : null}
+                <View>
+                  <View className="hot">热门</View>
+                  <BlockList listData={hot} className="history-list" />
+                </View>
               </View>
-              <BlockList
-                listData={history}
-                className="history-list"
-                onItemTap={this.onItemTap}
-              />
-            </View>:null}
-            <View>
-              <View className="hot">热门</View>
-              <BlockList
-                listData={hot}
-                className="history-list"
-              />
+            ) : null}
+            <View className="no-search-result">
+              <Image src="/image/icon/no_search_result.png" />
+              <Text>未找到搜索结果</Text>
             </View>
-          </View>:null}
-          <View className="no-search-result">
-            <Image src="/image/icon/no_search_result.png" />
-            <Text>未找到搜索结果</Text>
           </View>
-        </View>
-        ):null}
+        ) : null}
         <View className="search-results">
           {componentSuggestions.length > 0 ? (
             <View className="component">
@@ -220,8 +217,14 @@ export default class Search extends Component<PropsWithChildren> {
                       key={`items-${item.name}`}
                       last={index === componentSuggestions.length - 1}
                     >
-                      <View onClick={this.onListItemTap.bind(this,item.name,item.url)}>
-                        <Image src="{{item.thumb}}" className="thumb" />
+                      <View
+                        onClick={this.onListItemTap.bind(
+                          this,
+                          item.name,
+                          item.url
+                        )}
+                      >
+                        <Image src={item.thumb} className="thumb" />
                         <Text className="component-name">{item.name}</Text>
                       </View>
                     </am-list-item>
@@ -244,7 +247,13 @@ export default class Search extends Component<PropsWithChildren> {
                       key={`items-${item.name}`}
                       last={index === apiSuggestions.length - 1}
                     >
-                      <View onClick={this.onListItemTap.bind(this,item.name,item.url)}>
+                      <View
+                        onClick={this.onListItemTap.bind(
+                          this,
+                          item.name,
+                          item.url
+                        )}
+                      >
                         {item.thumb ? (
                           <Image src={item.thumb} className="thumb" />
                         ) : null}
@@ -558,11 +567,11 @@ const apiList = [
     path: "/page/API/request-payment/request-payment",
     suggestion: "requestpayment发起支付",
   },
-  {
-    name: "淘宝卡包",
-    path: "/page/API/card-pack/card-pack",
-    suggestion: "cardpack淘宝卡包",
-  },
+  // {
+  //   name: "淘宝卡包",
+  //   path: "/page/API/card-pack/card-pack",
+  //   suggestion: "cardpack淘宝卡包",
+  // },
   {
     name: "芝麻信用借还",
     path: "/page/API/zm-credit-borrow/zm-credit-borrow",
@@ -635,11 +644,11 @@ const apiList = [
     path: "/page/API/create-selector-query/create-selector-query",
     suggestion: "createselectorquery节点查询",
   },
-  {
-    name: "联系人",
-    path: "/page/API/contact/contact",
-    suggestion: "contact联系人",
-  },
+  // {
+  //   name: "联系人",
+  //   path: "/page/API/contact/contact",
+  //   suggestion: "contact联系人",
+  // },
   // {
   //   name: '标题栏加载动画',
   //   path: '/page/API/navigation-bar-loading/navigation-bar-loading',
