@@ -1,5 +1,11 @@
 # official-demo
 
+## 0.0.5
+
+### Patch Changes
+
+- [`05982e9`](https://github.com/Binbiubiubiu/tqt-demo/commit/05982e91586c5b68d7a9abcbfa99fbbd988da0f9) Thanks [@Binbiubiubiu](https://github.com/Binbiubiubiu)! - choose-city/choose-location/clipboard/compress-image/confirm/date-picker/download-file/file/get-auth-code
+
 ## 0.0.4
 
 ### Patch Changes
