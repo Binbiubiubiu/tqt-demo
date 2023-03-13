@@ -1,5 +1,11 @@
 # official-demo
 
+## 0.0.6
+
+### Patch Changes
+
+- [`020ec42`](https://github.com/Binbiubiubiu/tqt-demo/commit/020ec42e0f7c8a2ab06863eb9833bcc7fa258417) Thanks [@Binbiubiubiu](https://github.com/Binbiubiubiu)! - get-auth-code/get-location/get-network-type/get-system-info/get-server-time/get-user-info/get-image-info/image/keyboard/loading/make-phone-call/memory-warning/multi-level-select/options-select
+
 ## 0.0.5
 
 ### Patch Changes
