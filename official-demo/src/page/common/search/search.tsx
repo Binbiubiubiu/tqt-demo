@@ -659,21 +659,21 @@ const apiList = [
     path: "/page/API/choose-city/choose-city",
     suggestion: "choosecity选择城市选择",
   },
-  // {
-  //   name: '隐藏键盘',
-  //   path: '/page/API/keyboard/keyboard',
-  //   suggestion: 'hidekeyboard隐藏键盘',
-  // },
+  {
+    name: "隐藏键盘",
+    path: "/page/API/keyboard/keyboard",
+    suggestion: "hidekeyboard隐藏键盘",
+  },
   // {
   //   name: '级联选择',
   //   path: '/page/API/multi-level-select/multi-level-select',
   //   suggestion: 'multilevelselect级联选择',
   // },
-  // {
-  //   name: '选项选择',
-  //   path: '/page/API/options-select/options-select',
-  //   suggestion: 'multilevelselect级联选择',
-  // },
+  {
+    name: "选项选择",
+    path: "/page/API/options-select/options-select",
+    suggestion: "multilevelselect级联选择",
+  },
   {
     name: "获取手机网络状态",
     path: "/page/API/get-network-type/get-network-type",

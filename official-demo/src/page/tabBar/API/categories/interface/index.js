@@ -71,10 +71,10 @@ if (my.ap) {
       name: "选择城市",
       path: "/page/API/choose-city/choose-city",
     },
-    // {
-    //   name: '隐藏键盘',
-    //   path: '/page/API/keyboard/keyboard',
-    // },
+    {
+      name: "隐藏键盘",
+      path: "/page/API/keyboard/keyboard",
+    },
   ]);
 
   if (my.canIUse("multiLevelSelect")) {
@@ -88,10 +88,10 @@ if (my.ap) {
 
   if (my.canIUse("optionsSelect")) {
     interfaceList = interfaceList.concat([
-      // {
-      //   name: '选项选择器',
-      //   path: '/page/API/options-select/options-select',
-      // },
+      {
+        name: "选项选择器",
+        path: "/page/API/options-select/options-select",
+      },
     ]);
   }
 
