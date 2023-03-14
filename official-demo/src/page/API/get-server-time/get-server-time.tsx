@@ -14,7 +14,7 @@ export default class GetServerTime extends Component<PropsWithChildren> {
   componentDidHide() {}
 
   getServerTime = async () => {
-    const res = await Taro.getServerTime({});
+    const res = await Taro.getServerTime();
     console.log(res);
     Taro.showModal({
       content: res.time + "",

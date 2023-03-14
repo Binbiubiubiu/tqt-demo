@@ -221,7 +221,7 @@ export default class Search extends Component<PropsWithChildren> {
                         onClick={this.onListItemTap.bind(
                           this,
                           item.name,
-                          item.url
+                          item.path
                         )}
                       >
                         <Image src={item.thumb} className="thumb" />
@@ -251,7 +251,7 @@ export default class Search extends Component<PropsWithChildren> {
                         onClick={this.onListItemTap.bind(
                           this,
                           item.name,
-                          item.url
+                          item.path
                         )}
                       >
                         {item.thumb ? (

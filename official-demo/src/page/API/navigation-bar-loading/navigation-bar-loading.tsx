@@ -2,6 +2,8 @@ import { Component, PropsWithChildren } from "react";
 import { View, Button } from "@tarojs/components";
 import Taro from "@tarojs/taro";
 
+import "./navigation-bar-loading.less";
+
 export default class NavigationBarLoading extends Component<PropsWithChildren> {
   componentWillMount() {}
 

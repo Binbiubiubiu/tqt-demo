@@ -1,3 +1,3 @@
 export default definePageConfig({
-  navigationBarTitleText: "选项选择器",
+  navigationBarTitleText: "标题栏加载动画",
 });
