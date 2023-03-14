@@ -1,5 +1,11 @@
 # official-demo
 
+## 0.0.7
+
+### Patch Changes
+
+- [`49d7dbf`](https://github.com/Binbiubiubiu/tqt-demo/commit/49d7dbfad31e3bb771804d8692541540863c7a8b) Thanks [@Binbiubiubiu](https://github.com/Binbiubiubiu)! - navigator/open-location/pull-down-refresh/request/scan-code/set-navigation-bar/show-auth-guide/storage/toast/upload-file/vibrate/watch-shake
+
 ## 0.0.6
 
 ### Patch Changes
