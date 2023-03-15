@@ -97,10 +97,10 @@ if (my.ap) {
 
   if (my.canIUse("getTitleColor")) {
     interfaceList = interfaceList.concat([
-      {
-        name: "获取导航栏背景颜色",
-        path: "/page/API/get-title-color/get-title-color",
-      },
+      // {
+      //   name: "获取导航栏背景颜色",
+      //   path: "/page/API/get-title-color/get-title-color",
+      // },
     ]);
   }
 }

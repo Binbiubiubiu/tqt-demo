@@ -562,21 +562,21 @@ const apiList = [
     path: "/page/API/get-user-info/get-user-info",
     suggestion: "getuserinfo获取用户信息",
   },
-  {
-    name: "发起支付",
-    path: "/page/API/request-payment/request-payment",
-    suggestion: "requestpayment发起支付",
-  },
+  // {
+  //   name: "发起支付",
+  //   path: "/page/API/request-payment/request-payment",
+  //   suggestion: "requestpayment发起支付",
+  // },
   // {
   //   name: "淘宝卡包",
   //   path: "/page/API/card-pack/card-pack",
   //   suggestion: "cardpack淘宝卡包",
   // },
-  {
-    name: "芝麻信用借还",
-    path: "/page/API/zm-credit-borrow/zm-credit-borrow",
-    suggestion: "zmcreditborrow芝麻信用借还",
-  },
+  // {
+  //   name: "芝麻信用借还",
+  //   path: "/page/API/zm-credit-borrow/zm-credit-borrow",
+  //   suggestion: "zmcreditborrow芝麻信用借还",
+  // },
   {
     name: "文本风险识别",
     path: "/page/API/text-risk-identification/text-risk-identification",
