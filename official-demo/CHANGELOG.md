@@ -1,5 +1,11 @@
 # official-demo
 
+## 0.0.8
+
+### Patch Changes
+
+- [`053cddf`](https://github.com/Binbiubiubiu/tqt-demo/commit/053cddfc81aaa9ad9a0a74410346c18abf5e1842) Thanks [@Binbiubiubiu](https://github.com/Binbiubiubiu)! - finish api case
+
 ## 0.0.7
 
 ### Patch Changes
