@@ -1,5 +1,11 @@
 # official-demo
 
+## 0.0.10
+
+### Patch Changes
+
+- [`485ed71`](https://github.com/Binbiubiubiu/tqt-demo/commit/485ed71acc4941533dd13f02f097dee8d01cf664) Thanks [@Binbiubiubiu](https://github.com/Binbiubiubiu)! - cover-view/movable-view/rich-text/video/webview/
+
 ## 0.0.9
 
 ### Patch Changes
