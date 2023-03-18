@@ -1,17 +1,17 @@
-import fmtEvent from '../_util/fmtEvent';
+import fmtEvent from "../_util/fmtEvent";
 Component({
   props: {
-    className: '',
-    value: '',
-    placeholder: '',
+    className: "",
+    value: "",
+    placeholder: "",
     onSelect: function onSelect() {},
-    labelCls: '',
-    pickerCls: ''
+    labelCls: "",
+    pickerCls: "",
   },
   methods: {
     onPickerTap: function onPickerTap(e) {
       var event = fmtEvent(this.props, e);
       this.props.onPickerTap(event);
-    }
-  }
+    },
+  },
 });

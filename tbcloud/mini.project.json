@@ -1,0 +1,8 @@
+{
+  "cloud": {
+    "type": "tb-serverless"
+  },
+  "enableAppxNg": true,
+  "miniprogramRoot": "client/dist",
+  "component2": true
+}

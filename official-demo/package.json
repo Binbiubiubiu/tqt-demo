@@ -52,6 +52,7 @@
     "@tarojs/runtime": "3.6.2",
     "@tarojs/shared": "3.6.2",
     "@tarojs/taro": "3.6.2",
+    "@tbmp/mp-cloud-sdk": "^1.5.4",
     "clsx": "^1.2.1",
     "mini-antui": "^0.5.2",
     "react": "^18.0.0",

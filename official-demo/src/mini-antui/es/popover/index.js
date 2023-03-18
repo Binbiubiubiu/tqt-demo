@@ -1,15 +1,24 @@
 Component({
   props: {
     show: false,
-    className: '',
+    className: "",
     showMask: true,
-    position: 'bottomRight'
+    position: "bottomRight",
   },
   methods: {
     onMaskClick: function onMaskClick() {
-      if (this.props.onMaskClick && typeof this.props.onMaskClick === 'function') {
-        this.props.onMaskClick();
+      if (
+        this.props.onMaskClick &&
+        typeof this.props.onMaskClick === "function"
+      ) {
+        this.props.onMaskClick({
+          type: "maskclick",
+          currentTarget: {
+            id: this.props.id,
+            dataset: {},
+          },
+        });
       }
-    }
-  }
+    },
+  },
 });
