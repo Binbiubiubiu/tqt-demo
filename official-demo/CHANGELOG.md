@@ -1,5 +1,11 @@
 # official-demo
 
+## 0.0.9
+
+### Patch Changes
+
+- [`0a141d6`](https://github.com/Binbiubiubiu/tqt-demo/commit/0a141d6984fe511d95275bf08c8e672877768345) Thanks [@Binbiubiubiu](https://github.com/Binbiubiubiu)! - button/canvas/checkbox/form/icon/image/input/label/map/naviagtor/picker/picker-view/popover/progreess/radio/scroll-view/slider/swiper/switch/text/textarea/view
+
 ## 0.0.8
 
 ### Patch Changes
