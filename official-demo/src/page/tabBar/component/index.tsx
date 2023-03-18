@@ -92,14 +92,7 @@ export default class TabBarComponent extends Component<PropsWithChildren> {
   }
 
   render() {
-    const {
-      titleOpacity,
-      hot,
-      tabs,
-      activeTab,
-      shadow,
-      top,
-    } = this.state;
+    const { titleOpacity, hot, tabs, activeTab, shadow, top } = this.state;
     return (
       <View>
         <View className="banner">
@@ -119,8 +112,8 @@ export default class TabBarComponent extends Component<PropsWithChildren> {
         </View>
         <BlockList listData={hot} className="hot" />
         <View
-          className={clsx("tabs",shadow ? 'shadow' : '')}
-          style={{top: top}}
+          className={clsx("tabs", shadow ? "shadow" : "")}
+          style={{ top: top }}
         >
           <View className="tabs-bar">
             {tabs.map((item, index) => {
@@ -146,7 +139,9 @@ export default class TabBarComponent extends Component<PropsWithChildren> {
         <View className="list-wrap">
           <View
             className="list-container"
-            style={{ transform: 'translate3d(' +(-activeTab * 100) + 'vw, 0, 0)' }}
+            style={{
+              transform: "translate3d(" + -activeTab * 100 + "vw, 0, 0)",
+            }}
           >
             <View
               className="list"
