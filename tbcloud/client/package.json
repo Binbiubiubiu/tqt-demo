@@ -49,7 +49,7 @@
     "@tarojs/shared": "3.6.2",
     "@tarojs/taro": "3.6.2",
     "@tbmp/mp-cloud-sdk": "*",
-    "@tqtjs/taro-plugin-platform-tb": "^0.0.2",
+    "@tqtjs/taro-plugin-platform-tb": "^0.0.3",
     "lodash": "4.17.15",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"

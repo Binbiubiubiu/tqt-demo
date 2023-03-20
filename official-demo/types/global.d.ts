@@ -53,6 +53,7 @@ declare namespace Taro {
 }
 
 declare module JSX {
+  // @ts-ignore
   interface IntrinsicElements {
     "am-list": any;
     "am-list-item": any;

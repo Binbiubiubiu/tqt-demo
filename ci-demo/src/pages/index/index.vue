@@ -1,15 +1,15 @@
 <template>
   <view>
-    <table :dataSource="dataSource">
-      <table-column title="Id" dataIndex="id" />
-      <table-column title="Time" dataIndex="time" />
-    </table>
+    <Table :data-source="dataSource">
+      <TableColumn title="Id" data-index="id" />
+      <TableColumn title="Time" data-index="time" />
+    </Table>
   </view>
 </template>
 
 <script setup>
 import { computed } from 'vue'
-import { Table, TableColumn } from '@tarojs/components'
+import { Table, TableColumn, Balloon } from '@tarojs/components'
 import './index.less'
 
 const dataSource = computed(() => {

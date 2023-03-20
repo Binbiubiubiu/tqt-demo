@@ -55,8 +55,8 @@
     "@tarojs/runtime": "3.6.2",
     "@tarojs/shared": "3.6.2",
     "@tarojs/taro": "3.6.2",
-    "@tqtjs/taro-plugin-mini-ci": "^0.0.1",
-    "@tqtjs/taro-plugin-platform-qn": "^0.0.2",
+    "@tqtjs/taro-plugin-mini-ci": "^0.0.2",
+    "@tqtjs/taro-plugin-platform-qn": "^0.0.3",
     "vue": "^3.0.0"
   },
   "devDependencies": {
