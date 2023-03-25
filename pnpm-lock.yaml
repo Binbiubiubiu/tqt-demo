@@ -65,7 +65,7 @@ importers:
       '@tarojs/shared': 3.6.2
       '@tarojs/taro': 3.6.2_vue@3.2.47
       '@tqtjs/taro-plugin-mini-ci': 0.0.2_vue@3.2.47
-      '@tqtjs/taro-plugin-platform-qn': link:../../tqt/packages/taro-plugin-platform-qn
+      '@tqtjs/taro-plugin-platform-qn': link:../../../study-workspace/tqt/packages/taro-plugin-platform-qn
       vue: 3.2.47
     devDependencies:
       '@babel/core': 7.21.3
@@ -148,7 +148,7 @@ importers:
       '@tarojs/shared': 3.6.2
       '@tarojs/taro': 3.6.2_@types+react@18.0.28
       '@tbmp/mp-cloud-sdk': 1.5.4
-      '@tqtjs/taro-plugin-platform-tb': link:../../tqt/packages/taro-plugin-platform-tb
+      '@tqtjs/taro-plugin-platform-tb': 0.0.3_rrwntbnjgofajke7uxizx67wau
       clsx: 1.2.1
       mini-antui: 0.5.2
       react: 18.2.0
@@ -3034,7 +3034,7 @@ packages:
       exif-parser: 0.1.12
       file-type: 16.5.4
       isomorphic-fetch: 3.0.0
-      mkdirp: 2.1.5
+      mkdirp: 2.1.6
       pixelmatch: 4.0.2
       tinycolor2: 1.6.0
     transitivePeerDependencies:
@@ -13240,7 +13240,7 @@ packages:
       lodash: 4.17.15
       memory-fs: 0.5.0
       minimatch: 3.0.4
-      moment-timezone: 0.5.41
+      moment-timezone: 0.5.42
       postcss: 8.4.21
       qrcode-reader: 1.0.4
       qrcode-terminal: 0.12.0
@@ -13305,8 +13305,8 @@ packages:
     hasBin: true
     dev: true
 
-  /mkdirp/2.1.5:
-    resolution: {integrity: sha512-jbjfql+shJtAPrFoKxHOXip4xS+kul9W3OzfzzrqueWK2QMGon2bFH2opl6W9EagBThjEz+iysyi/swOoVfB/w==}
+  /mkdirp/2.1.6:
+    resolution: {integrity: sha512-+hEnITedc8LAtIP9u3HJDFIdcLV2vXP33sqLLIzkv1Db1zO/1OxbvYf0Y1OC/S/Qo5dxHXepofhmxL02PsKe+A==}
     engines: {node: '>=10'}
     hasBin: true
     dev: false
@@ -13314,8 +13314,8 @@ packages:
   /mobile-detect/1.4.5:
     resolution: {integrity: sha512-yc0LhH6tItlvfLBugVUEtgawwFU2sIe+cSdmRJJCTMZ5GEJyLxNyC/NIOAOGk67Fa8GNpOttO3Xz/1bHpXFD/g==}
 
-  /moment-timezone/0.5.41:
-    resolution: {integrity: sha512-e0jGNZDOHfBXJGz8vR/sIMXvBIGJJcqFjmlg9lmE+5KX1U7/RZNMswfD8nKnNCnQdKTIj50IaRKwl1fvMLyyRg==}
+  /moment-timezone/0.5.42:
+    resolution: {integrity: sha512-tjI9goqwzkflKSTxJo+jC/W8riTFwEjjunssmFvAWlvNVApjbkJM7UHggyKO0q1Fd/kZVKY77H7C9A0XKhhAFw==}
     dependencies:
       moment: 2.29.4
     dev: false
@@ -15670,6 +15670,7 @@ packages:
       chokidar: 3.5.3
       immutable: 4.3.0
       source-map-js: 1.0.2
+    dev: true
 
   /sass/1.59.3:
     resolution: {integrity: sha512-QCq98N3hX1jfTCoUAsF3eyGuXLsY7BCnCEg9qAact94Yc21npG2/mVOqoDvE0fCbWDqiM4WlcJQla0gWG2YlxQ==}
@@ -15749,7 +15750,7 @@ packages:
       loglevel: 1.8.1
       loglevel-plugin-prefix: 0.8.4
       pretty-bytes: 5.6.0
-      sass: 1.50.0
+      sass: 1.59.3
       tslib: 1.14.1
 
   /scss-parser/1.0.6:
