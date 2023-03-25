@@ -1,9 +1,9 @@
 <template>
   <view>
-    <Table :data-source="dataSource">
-      <TableColumn title="Id" data-index="id" />
-      <TableColumn title="Time" data-index="time" />
-    </Table>
+    <table :dataSource="dataSource">
+      <table-column title="Id" dataIndex="id" />
+      <table-column title="Time" dataIndex="time" />
+    </table>
   </view>
 </template>
 
